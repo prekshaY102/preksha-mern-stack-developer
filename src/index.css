@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-night: #0b1530;
+  --color-deep: #14244f;
+  --color-line: #26396b;
+  --color-sky: #7fb2e5;
+  --color-sun: #f2c230;
+  --color-paper: #f4ead0;
+  --color-muted: #a9b6d3;
+}
+.canvas-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+  opacity: 0.35;
+}
+
+html { scroll-behavior: smooth; }
+body { @apply bg-night text-paper font-sans antialiased; }
